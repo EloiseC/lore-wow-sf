@@ -1,0 +1,25 @@
+easy_admin:
+    formats:
+        date: 'd/m/Y'
+        datetime: 'd/m/Y H:i'
+
+    site_name: 'Au Coeur du Lore'
+
+    design:
+
+#        brand_color: '#E64100'
+#    assets:
+#        favicon: '/img/favicon.ico'
+
+        menu:
+            - { entity: 'Area',label: 'Zones', icon: 'map'}
+            - { entity: 'Faction',label: 'Factions', icon: 'flag'}
+
+
+    entities:
+        Area:
+            class: App\Entity\Area
+
+
+        Faction:
+            class: App\Entity\Faction
