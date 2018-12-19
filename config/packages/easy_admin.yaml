@@ -12,14 +12,33 @@ easy_admin:
 #        favicon: '/img/favicon.ico'
 
         menu:
-            - { entity: 'Area',label: 'Zones', icon: 'map'}
+            - { entity: 'Lore',label: 'Lore', icon: 'book'}
+            - { entity: 'Persona',label: 'Personnages', icon: 'group'}
+            - { entity: 'Race',label: 'Races', icon: 'circle'}
             - { entity: 'Faction',label: 'Factions', icon: 'flag'}
+            - { entity: 'Area',label: 'Zones', icon: 'map'}
+            - { entity: 'Image',label: 'Images', icon: 'image'}
+            - { entity: 'TypeImage',label: 'Type images'}
 
 
     entities:
         Area:
             class: App\Entity\Area
 
-
         Faction:
             class: App\Entity\Faction
+
+        Race:
+            class: App\Entity\Race
+
+        Persona:
+            class: App\Entity\Persona
+
+        Lore:
+            class: App\Entity\Lore
+
+        Image:
+            class: App\Entity\Image
+
+        TypeImage:
+            class: App\Entity\TypeImage
