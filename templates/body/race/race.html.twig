@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h3>Races</h3>
+        <ul>
+            {% if races %}
+                {% for r in races %}
+                    <li><a href="{{ path('show_one_race', {'id' : r.id}) }}">{{ r.id }}</a></li>
+                {% endfor %}
+            {% else %}
+                Pas de races
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

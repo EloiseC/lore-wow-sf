@@ -1,3 +1,102 @@
+html, body {
+    height:100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+
 body {
-    background-color: lightgray;
+    padding-top: 200px;
+}
+
+main {
+    height: 100%;
+    background-color: #1ea471;
+
+}
+
+main .container {
+    background-color: white;
+}
+
+/* HEADER */
+header {
+    background-color: #343a40;
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background:#222;
+    color: #f2f2f2;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    list-style-type:none;
+}
+
+/* ICON FONT AWESOME */
+.fa, .fas {
+    margin-right: 5px;
+}
+
+.fa-book-open:before {
+    content: "\F518";
+}
+
+.fa-group:before {
+    content: "\F0C0";
+}
+
+.fa-user-ninja:before {
+    content: "\F504";
+}
+
+.fa-map-signs:before {
+    content: "\F024";
+}
+.fa-map-signs:before {
+    content: "\F277";
+}
+
+/* SEARCH BAR */
+input[type=search] {
+    background: #555 url(http://hp-proliant.co.uk/qual_images/mob-search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    right: 30px;
+    margin-top: 8px;
+}
+input[type=search]:focus {
+    width: auto;
+    background-color: #ccc;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #343a40;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: white;
 }

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h3>Lore</h3>
+        <ul>
+            {% if lores %}
+                {% for l in lores %}
+                    <li><a href="{{ path('show_lore_details', {'id' : l.id}) }}">{{ l.id }}</a></li>
+                {% endfor %}
+            {% else %}
+                Pas de lore
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

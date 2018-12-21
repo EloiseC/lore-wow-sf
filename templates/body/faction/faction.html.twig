@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h3>Factions</h3>
+        <ul>
+            {% if factions %}
+                {% for f in factions %}
+                    <li><a href="{{ path('show_one_faction', {'id' : f.id}) }}">{{ f.id }}</a></li>
+                {% endfor %}
+            {% else %}
+                Pas de factions
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

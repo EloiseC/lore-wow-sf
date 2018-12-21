@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h3>Personnages</h3>
+        <ul>
+            {% if personnages %}
+            {% for p in personnages %}
+                <li><a href="{{ path('show_one_character', {'id' : p.id}) }}">{{ p.id }}</a></li>
+            {% endfor %}
+            {% else %}
+                Pas de personnages
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

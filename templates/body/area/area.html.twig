@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        <h3>Zones</h3>
+        <ul>
+            {% if areas %}
+                {% for a in areas %}
+                    <li><a href="{{ path('show_one_area', {'id' : a.id}) }}">{{ a.id }}</a></li>
+                {% endfor %}
+            {% else %}
+                Pas de zones
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

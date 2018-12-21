@@ -22,21 +22,16 @@ easy_admin:
 
 
     entities:
-        Area:
-            class: App\Entity\Area
-
-        Faction:
-            class: App\Entity\Faction
-
-        Race:
-            class: App\Entity\Race
-
-        Persona:
-            class: App\Entity\Persona
-
         Lore:
             class: App\Entity\Lore
-
+        Persona:
+            class: App\Entity\Persona
+        Race:
+            class: App\Entity\Race
+        Faction:
+            class: App\Entity\Faction
+        Area:
+            class: App\Entity\Area
         Image:
             class: App\Entity\Image
 

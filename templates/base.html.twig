@@ -1,12 +1,62 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Au Coeur Du LOre{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/app.js') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script type="text/javascript" src="{{ asset('build/js/jquery.min.js') }}"></script>
     </head>
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block header%}
+
+            <header>
+                <div class="container">
+                    <div class="col-sm-12">
+                        {{ include('header/header.html.twig') }}
+                    </div>
+                </div>
+                <nav>
+                    {% block menu %}
+                        {{ include('header/menu/menu.html.twig') }}
+                    {% endblock %}
+                </nav>
+            </header>
+
+        {% endblock %}
+
+        <main>
+            <div class="container">
+                <div class="col-sm-12">
+                    {% block body %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+        {% block footer %}
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        {{ include('footer/footer.html.twig') }}
+                    </div>
+                </div>
+            </footer>
+
+        {% endblock %}
+
+
+
+
+
+
     </body>
+
 </html>
