@@ -12,6 +12,6 @@ Then, run this cmd :
 - yarn build
 - yarn watch
 
-About dbb, first, config your .env then run :
+About bdd, first, config your .env then run :
 - php bin/console d:d:c
 - php bin/console d:s:u --f
